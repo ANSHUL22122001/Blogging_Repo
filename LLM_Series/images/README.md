@@ -7,4 +7,4 @@ Add your drawing photos here with these exact names to auto-match the markdown:
 - attention-transformer-drawing.jpg
 - ai-ml-dl-llm-hierarchy-drawing.jpg
 
-Tip: Use `.jpg` or update extensions in `../2nd-page.md`.
+Tip: Use `.jpg` or update extensions in `../1st-page.md`.

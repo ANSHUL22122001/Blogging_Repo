@@ -57,6 +57,27 @@
     }
     .title { font-weight: 700; margin-bottom: 6px; }
     .meta { color: var(--accent); font-size: 0.92rem; }
+    .pager {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .btn.disabled {
+      color: #94a3b8;
+      border-color: #e2e8f0;
+      background: #f8fafc;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -65,10 +86,14 @@
       <h1>Blogging Repo</h1>
       <p>Local-first blog content hosted on GitHub Pages.</p>
       <div class="grid">
-        <a class="card" href="LLM_Series/2nd-page.html">
+        <a class="card" href="LLM_Series/1st-page.html">
           <div class="title">The Agentic Way: Understanding Large Language Models</div>
-          <div class="meta">LLM Series • Page 2</div>
+          <div class="meta">LLM Series • Page 1</div>
         </a>
+      </div>
+      <div class="pager">
+        <span class="btn disabled">← Previous</span>
+        <a class="btn" href="LLM_Series/1st-page.html">Next →</a>
       </div>
     </section>
   </main>

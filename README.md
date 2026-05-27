@@ -5,8 +5,8 @@ Personal blogging repository with Markdown source and hosted HTML pages.
 ## Structure
 
 - `index.html` - Home page for GitHub Pages
-- `LLM_Series/2nd-page.md` - Markdown source content
-- `LLM_Series/2nd-page.html` - Published HTML page
+- `LLM_Series/1st-page.md` - Markdown source content
+- `LLM_Series/1st-page.html` - Published HTML page
 - `LLM_Series/images/generated/` - SVG diagrams used in posts
 
 ## Publish Workflow

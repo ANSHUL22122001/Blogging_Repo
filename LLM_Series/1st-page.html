@@ -58,6 +58,31 @@
     }
     img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
     .caption { color: var(--muted); font-size: 0.92rem; margin-top: 8px; }
+    .pager {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .btn.disabled {
+      color: #94a3b8;
+      border-color: #e2e8f0;
+      background: #f8fafc;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
@@ -159,6 +184,11 @@
       <h2>Key Takeaway</h2>
       <p>An LLM is not just a chatbot feature. It is a transformer-based deep learning model that can handle broad NLP work, power generative AI experiences, and support agentic systems that complete real tasks.</p>
       <p>In the next page, we can break down how prompting changes model behavior in real-world scenarios.</p>
+
+      <nav class="pager" aria-label="Page navigation">
+        <a class="btn" href="../index.html">← Previous</a>
+        <span class="btn disabled">Next →</span>
+      </nav>
     </article>
   </main>
 </body>
