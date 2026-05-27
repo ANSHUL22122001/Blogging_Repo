@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="AI ML DL LLM nested hierarchy">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <filter id="depth" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#312e81" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="700" fill="url(#bg3)"/>
+  <text x="600" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="42" text-anchor="middle" fill="#1e1b4b" font-weight="700">AI -> ML -> DL -> LLM</text>
+  <text x="600" y="108" font-family="Segoe UI, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#3730a3">From broad field to specialized language models</text>
+
+  <rect x="130" y="150" width="940" height="470" rx="26" ry="26" fill="#e0e7ff" stroke="#818cf8" stroke-width="3" filter="url(#depth)"/>
+  <text x="180" y="205" font-family="Segoe UI, Arial, sans-serif" font-size="36" fill="#312e81" font-weight="700">Artificial Intelligence</text>
+  <text x="180" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#3730a3">Intelligent systems, reasoning, planning, perception</text>
+
+  <rect x="240" y="245" width="720" height="320" rx="24" ry="24" fill="#c7d2fe" stroke="#6366f1" stroke-width="3" filter="url(#depth)"/>
+  <text x="285" y="292" font-family="Segoe UI, Arial, sans-serif" font-size="32" fill="#312e81" font-weight="700">Machine Learning</text>
+  <text x="285" y="322" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#3730a3">Pattern learning from data</text>
+
+  <rect x="340" y="335" width="520" height="190" rx="20" ry="20" fill="#a5b4fc" stroke="#4f46e5" stroke-width="3" filter="url(#depth)"/>
+  <text x="380" y="380" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#1f1b7a" font-weight="700">Deep Learning</text>
+  <text x="380" y="410" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#312e81">Multi-layer neural networks</text>
+
+  <rect x="440" y="410" width="320" height="90" rx="18" ry="18" fill="#4f46e5" stroke="#3730a3" stroke-width="3" filter="url(#depth)"/>
+  <text x="600" y="463" font-family="Segoe UI, Arial, sans-serif" font-size="30" text-anchor="middle" fill="#ffffff" font-weight="700">LLMs</text>
+
+  <text x="600" y="650" font-family="Segoe UI, Arial, sans-serif" font-size="22" text-anchor="middle" fill="#312e81">LLMs are a specific deep learning application focused on language understanding and generation.</text>
+</svg>

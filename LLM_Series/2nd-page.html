@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Agentic Way: Understanding Large Language Models</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #1d4ed8;
+      --border: #dbeafe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, #dbeafe 0%, #f8fafc 40%);
+      line-height: 1.75;
+    }
+    .container {
+      max-width: 920px;
+      margin: 36px auto;
+      padding: 0 18px;
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    h1 { margin: 0 0 10px; line-height: 1.3; }
+    h2 { margin-top: 28px; margin-bottom: 10px; color: #0b3a98; }
+    p { margin: 12px 0; }
+    ul, ol { margin: 10px 0 10px 26px; }
+    li { margin: 6px 0; }
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .image-block {
+      margin: 18px 0;
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
+    .caption { color: var(--muted); font-size: 0.92rem; margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <article>
+      <a class="back" href="../index.html">← Back to Home</a>
+
+      <h1>The Agentic Way: Understanding Large Language Models</h1>
+      <p class="lead">If AI feels magical from the outside, Large Language Models (LLMs) are the engine under the hood. This page breaks down what an LLM actually is, why it is called "large," and what it can do in day-to-day NLP work.</p>
+
+      <h2>What Is a Large Language Model?</h2>
+      <p>A Large Language Model is a deep neural network trained to understand patterns in text and generate human-like responses.</p>
+      <p>In simple words, it learns from massive text data, then predicts what comes next in a sequence of words. That single ability powers many tasks, from answering questions to writing summaries.</p>
+
+      <h2>Why Is It Called "Large"?</h2>
+      <p>The word large usually refers to two things:</p>
+      <ol>
+        <li>Number of parameters: Often millions or billions.</li>
+        <li>Training scale: Huge datasets collected from diverse text sources.</li>
+      </ol>
+      <p>Parameters are learned values inside the model. More parameters usually mean the model can capture richer language patterns, but size alone does not guarantee better quality.</p>
+
+      <h2>Core Building Block: Neural Networks</h2>
+      <p>LLMs are based on deep neural networks. During training, the network adjusts its internal weights to reduce prediction errors.</p>
+      <p>A practical way to think about it:</p>
+      <ul>
+        <li>Input: A sequence of words or tokens.</li>
+        <li>Processing: Multiple layers transform that sequence.</li>
+        <li>Output: The most likely next token (repeated step by step).</li>
+      </ul>
+      <p>Over time, this training helps the model respond with fluent and context-aware text.</p>
+
+      <h2>What Can LLMs Do?</h2>
+      <p>Because they model language patterns well, LLMs can handle a wide range of NLP tasks:</p>
+      <ul>
+        <li>Question answering</li>
+        <li>Translation</li>
+        <li>Summarization</li>
+        <li>Sentiment analysis</li>
+        <li>Text classification</li>
+        <li>Draft generation for emails, docs, and code</li>
+      </ul>
+
+      <h2>LLMs vs Traditional NLP Models</h2>
+      <p>This comparison usually clicks fast:</p>
+      <ul>
+        <li>Traditional NLP models are often designed for one specific task, like translation or sentiment classification.</li>
+        <li>LLMs are general-purpose language models that can switch across tasks with prompt changes.</li>
+      </ul>
+      <p>That flexibility is the biggest reason LLMs feel more capable in real products.</p>
+
+      <div class="image-block">
+        <img src="images/generated/llm-vs-nlp.svg" alt="LLM vs Traditional NLP diagram">
+        <div class="caption">Figure: LLM vs traditional NLP comparison.</div>
+      </div>
+
+      <h2>What Made LLMs So Effective?</h2>
+      <p>The short answer is transformer architecture.</p>
+      <p>In 2017, the paper <em>Attention Is All You Need</em> introduced transformers and changed the direction of modern NLP. Instead of processing text strictly in order like older recurrent models, transformers use attention to weigh which words matter most for each token prediction.</p>
+      <p>That design made large-scale training more practical and performance much stronger.</p>
+
+      <div class="image-block">
+        <img src="images/generated/transformer-breakthrough-2017.svg" alt="Transformer architecture breakthrough 2017">
+        <div class="caption">Figure: The transformer breakthrough in 2017.</div>
+      </div>
+
+      <h2>The AI Stack: Where LLMs Sit</h2>
+      <p>Think of this as a nested stack:</p>
+      <ol>
+        <li>Artificial Intelligence (AI)</li>
+        <li>Machine Learning (ML)</li>
+        <li>Deep Learning (DL)</li>
+        <li>Large Language Models (LLMs)</li>
+      </ol>
+      <p>So LLMs are a specific part of deep learning, and deep learning is one branch inside machine learning.</p>
+
+      <div class="image-block">
+        <img src="images/generated/ai-ml-dl-llm-hierarchy.svg" alt="AI ML DL LLM hierarchy diagram">
+        <div class="caption">Figure: AI → ML → DL → LLM hierarchy.</div>
+      </div>
+
+      <h2>AI, ML, DL, and LLM in Plain Words</h2>
+      <ul>
+        <li>AI: The broad goal of building systems that show intelligent behavior.</li>
+        <li>ML: Systems that learn patterns from data instead of relying only on hand-written rules.</li>
+        <li>DL: A subset of ML based mainly on neural networks with many layers.</li>
+        <li>LLM: A deep learning model specialized for language understanding and generation.</li>
+      </ul>
+      <p>Another practical difference: deep learning can work across text, images, audio, and video, while LLMs are primarily optimized for language tasks.</p>
+
+      <h2>LLMs and Generative AI</h2>
+      <p>Generative AI is the broader category of models that create new content. LLMs are one major engine inside it for text generation, reasoning, and conversational workflows.</p>
+      <p>If you build a writing assistant, support bot, or coding copilot, you are usually combining generative AI behavior with an LLM core.</p>
+
+      <h2>Where Agentic Work Starts</h2>
+      <p>An LLM becomes more useful in an agent setup: it can reason over a goal, choose a tool, execute a step, check results, and continue until the task is complete.</p>
+      <p>That is the shift from "generate one response" to "complete a workflow."</p>
+
+      <h2>Key Takeaway</h2>
+      <p>An LLM is not just a chatbot feature. It is a transformer-based deep learning model that can handle broad NLP work, power generative AI experiences, and support agentic systems that complete real tasks.</p>
+      <p>In the next page, we can break down how prompting changes model behavior in real-world scenarios.</p>
+    </article>
+  </main>
+</body>
+</html>
