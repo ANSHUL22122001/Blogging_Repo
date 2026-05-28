@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="700" viewBox="0 0 1300 700" role="img" aria-labelledby="title desc">
+  <title id="title">BERT vs GPT Comparison</title>
+  <desc id="desc">Side by side comparison of BERT and GPT model orientation, objective, and common use cases.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .head { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #0b3a98; }
+      .text { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .label { font: 700 17px 'Segoe UI', Arial, sans-serif; fill: #1e3a8a; }
+      .panelA { fill: #ffffff; stroke: #60a5fa; stroke-width: 2.2; rx: 16; }
+      .panelB { fill: #ffffff; stroke: #7c3aed; stroke-width: 2.2; rx: 16; }
+      .row { stroke: #dbeafe; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1300" height="700" fill="url(#bg)"/>
+  <text x="650" y="64" text-anchor="middle" class="title">BERT vs GPT: Same Transformer Family, Different Roles</text>
+
+  <rect class="panelA" x="70" y="110" width="540" height="530"/>
+  <text x="340" y="165" text-anchor="middle" class="head">BERT</text>
+  <text x="340" y="195" text-anchor="middle" class="text">Bidirectional Encoder Representations from Transformers</text>
+
+  <line class="row" x1="90" y1="225" x2="590" y2="225"/>
+  <text x="110" y="265" class="label">Architecture</text>
+  <text x="285" y="265" class="text">Encoder oriented</text>
+
+  <text x="110" y="315" class="label">Training objective</text>
+  <text x="285" y="315" class="text">Masked token prediction</text>
+
+  <text x="110" y="365" class="label">Best at</text>
+  <text x="285" y="365" class="text">Language understanding tasks</text>
+
+  <text x="110" y="415" class="label">Common use cases</text>
+  <text x="285" y="415" class="text">Classification, NER, sentiment, extractive QA</text>
+
+  <text x="110" y="465" class="label">Prediction style</text>
+  <text x="285" y="465" class="text">Uses left and right context together</text>
+
+  <text x="110" y="545" class="text">Example: "The movie was [MASK]" -> predicts "great"</text>
+
+  <rect class="panelB" x="690" y="110" width="540" height="530"/>
+  <text x="960" y="165" text-anchor="middle" class="head">GPT</text>
+  <text x="960" y="195" text-anchor="middle" class="text">Generative Pretrained Transformer</text>
+
+  <line class="row" x1="710" y1="225" x2="1210" y2="225"/>
+  <text x="730" y="265" class="label">Architecture</text>
+  <text x="905" y="265" class="text">Decoder oriented</text>
+
+  <text x="730" y="315" class="label">Training objective</text>
+  <text x="905" y="315" class="text">Next token prediction</text>
+
+  <text x="730" y="365" class="label">Best at</text>
+  <text x="905" y="365" class="text">Text generation and continuation</text>
+
+  <text x="730" y="415" class="label">Common use cases</text>
+  <text x="905" y="415" class="text">Chat, drafting, summarization, code generation</text>
+
+  <text x="730" y="465" class="label">Prediction style</text>
+  <text x="905" y="465" class="text">Predicts one token at a time left to right</text>
+
+  <text x="730" y="545" class="text">Example: "The movie was" -> predicts next token sequence</text>
+</svg>

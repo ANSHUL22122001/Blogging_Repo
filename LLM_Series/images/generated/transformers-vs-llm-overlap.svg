@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Transformers versus LLM Overlap</title>
+  <desc id="desc">Venn style diagram showing overlap between transformer models and language models at large scale.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #1e3a8a; }
+      .text { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .left { fill: rgba(37, 99, 235, 0.24); stroke: #2563eb; stroke-width: 2; }
+      .right { fill: rgba(14, 116, 144, 0.24); stroke: #0e7490; stroke-width: 2; }
+      .card { fill: #ffffff; stroke: #bfdbfe; stroke-width: 2; rx: 14; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="720" fill="url(#bg)"/>
+  <text x="600" y="64" text-anchor="middle" class="title">Transformer vs LLM: Overlap, Not Equality</text>
+
+  <circle class="left" cx="470" cy="340" r="220"/>
+  <circle class="right" cx="730" cy="340" r="220"/>
+
+  <text x="350" y="160" class="label">Transformers</text>
+  <text x="765" y="160" class="label">LLMs</text>
+  <text x="600" y="280" text-anchor="middle" class="label">Common zone</text>
+
+  <text x="300" y="300" class="text">Used in vision</text>
+  <text x="270" y="330" class="text">and multimodal tasks</text>
+  <text x="295" y="390" class="text">Architecture family</text>
+
+  <text x="790" y="300" class="text">Large language</text>
+  <text x="790" y="330" class="text">models and assistants</text>
+  <text x="790" y="390" class="text">Scale + language objective</text>
+
+  <text x="540" y="320" class="text">GPT style</text>
+  <text x="540" y="350" class="text">BERT style</text>
+  <text x="540" y="380" class="text">T5 style</text>
+
+  <rect class="card" x="110" y="585" width="980" height="90"/>
+  <text x="600" y="635" text-anchor="middle" class="text">Many LLMs are transformer based, but not every transformer model is an LLM.</text>
+</svg>

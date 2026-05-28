@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Transformers vs LLMs</title>
+  <desc id="desc">Relationship diagram showing overlap between transformer models and LLM systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #0b3a98; }
+      .label { font: 700 24px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 18px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" class="title">Transformers and LLMs: Strong Overlap, Not Full Equality</text>
+
+  <circle cx="470" cy="300" r="190" fill="#dbeafe" stroke="#60a5fa" stroke-width="3"/>
+  <circle cx="730" cy="300" r="190" fill="#dcfce7" stroke="#4ade80" stroke-width="3"/>
+
+  <text x="390" y="210" class="label">Transformers</text>
+  <text x="660" y="210" class="label">LLMs</text>
+
+  <text x="320" y="270" class="small">• Encoder-only models</text>
+  <text x="320" y="305" class="small">• Vision transformers</text>
+  <text x="320" y="340" class="small">• Multimodal transformer blocks</text>
+
+  <text x="760" y="270" class="small">• Large language models</text>
+  <text x="760" y="305" class="small">• Prompt-driven applications</text>
+  <text x="760" y="340" class="small">• Instruction-tuned systems</text>
+
+  <text x="600" y="280" text-anchor="middle" class="label">Most modern</text>
+  <text x="600" y="315" text-anchor="middle" class="label">LLMs are</text>
+  <text x="600" y="350" text-anchor="middle" class="label">transformer-based</text>
+
+  <text x="600" y="510" text-anchor="middle" class="small">Transformer = architecture pattern | LLM = large-scale language model category</text>
+</svg>

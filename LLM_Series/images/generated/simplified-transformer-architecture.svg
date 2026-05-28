@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified Transformer Encoder Decoder Architecture</title>
+  <desc id="desc">Input sentence flows through embedding and encoder blocks, then to decoder blocks to produce translated output token by token.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .label { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #1e3a8a; }
+      .small { font: 500 15px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #93c5fd; stroke-width: 2; rx: 12; }
+      .stage { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 14; }
+      .token { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.8; rx: 10; }
+      .arrow { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .link { stroke: #64748b; stroke-width: 2.3; fill: none; stroke-dasharray: 7 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="760" fill="url(#bg)"/>
+  <text x="700" y="62" text-anchor="middle" class="title">Simplified Transformer (Translation Example)</text>
+
+  <text x="235" y="112" text-anchor="middle" class="label">Encoder Side</text>
+  <text x="1160" y="112" text-anchor="middle" class="label">Decoder Side</text>
+
+  <rect class="token" x="70" y="150" width="330" height="56"/>
+  <text x="235" y="185" text-anchor="middle" class="small">Input: "This is an example"</text>
+
+  <rect class="box" x="110" y="235" width="250" height="74"/>
+  <text x="235" y="279" text-anchor="middle" class="small">Tokenization + Embedding</text>
+
+  <rect class="stage" x="110" y="335" width="250" height="88"/>
+  <text x="235" y="374" text-anchor="middle" class="small">Encoder Layer Stack</text>
+  <text x="235" y="398" text-anchor="middle" class="small">(Self Attention + FFN)</text>
+
+  <rect class="box" x="110" y="448" width="250" height="74"/>
+  <text x="235" y="492" text-anchor="middle" class="small">Contextual Encodings</text>
+
+  <rect class="token" x="995" y="150" width="330" height="56"/>
+  <text x="1160" y="185" text-anchor="middle" class="small">Partial Output: "Das ist ein"</text>
+
+  <rect class="box" x="1035" y="235" width="250" height="74"/>
+  <text x="1160" y="279" text-anchor="middle" class="small">Target Embedding</text>
+
+  <rect class="stage" x="1035" y="335" width="250" height="88"/>
+  <text x="1160" y="374" text-anchor="middle" class="small">Decoder Layer Stack</text>
+  <text x="1160" y="398" text-anchor="middle" class="small">(Masked + Cross Attention)</text>
+
+  <rect class="box" x="1035" y="448" width="250" height="74"/>
+  <text x="1160" y="492" text-anchor="middle" class="small">Output Projection</text>
+
+  <rect class="token" x="980" y="553" width="360" height="68"/>
+  <text x="1160" y="594" text-anchor="middle" class="small">Next token prediction: "Beispiel"</text>
+
+  <path class="arrow" d="M235 206 L235 234"/>
+  <path class="arrow" d="M235 309 L235 334"/>
+  <path class="arrow" d="M235 423 L235 447"/>
+
+  <path class="arrow" d="M1160 206 L1160 234"/>
+  <path class="arrow" d="M1160 309 L1160 334"/>
+  <path class="arrow" d="M1160 423 L1160 447"/>
+  <path class="arrow" d="M1160 522 L1160 552"/>
+
+  <path class="link" d="M360 485 C640 485, 760 485, 1035 379"/>
+  <text x="700" y="466" text-anchor="middle" class="small">encoder context passed to decoder (cross attention)</text>
+
+  <path class="arrow" d="M980 178 L400 178"/>
+  <text x="690" y="167" text-anchor="middle" class="small">generation repeats token by token</text>
+</svg>

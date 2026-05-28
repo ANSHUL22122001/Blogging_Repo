@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+  <title id="title">Token to Vector Embedding Map</title>
+  <desc id="desc">Tokens are converted into vectors and arranged in embedding space.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 30px 'Segoe UI', Arial, sans-serif; fill: #0b3a98; }
+      .label { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #bfdbfe; stroke-width: 2; rx: 12; }
+      .dotA { fill: #1d4ed8; }
+      .dotB { fill: #059669; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1d4ed8"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="680" fill="url(#bg)"/>
+  <text x="600" y="56" text-anchor="middle" class="title">Vector Embedding: From Tokens to Numeric Meaning</text>
+
+  <rect class="box" x="60" y="110" width="260" height="500"/>
+  <text x="190" y="146" text-anchor="middle" class="label">Tokens</text>
+  <text x="90" y="188" class="small">1. king</text>
+  <text x="90" y="222" class="small">2. man</text>
+  <text x="90" y="256" class="small">3. woman</text>
+  <text x="90" y="290" class="small">4. apple</text>
+  <text x="90" y="324" class="small">5. banana</text>
+  <text x="90" y="358" class="small">6. orange</text>
+  <text x="90" y="392" class="small">7. football</text>
+  <text x="90" y="426" class="small">8. golf</text>
+  <text x="90" y="460" class="small">9. tennis</text>
+
+  <line x1="330" y1="360" x2="470" y2="360" stroke="#1d4ed8" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="400" y="340" text-anchor="middle" class="small">Embedding layer</text>
+
+  <rect class="box" x="480" y="110" width="260" height="500"/>
+  <text x="610" y="146" text-anchor="middle" class="label">Sample Vectors (2D view)</text>
+  <text x="510" y="188" class="small">king   → [ 4.0,  5.0 ]</text>
+  <text x="510" y="222" class="small">man    → [ 3.0,  3.5 ]</text>
+  <text x="510" y="256" class="small">woman  → [ 5.0,  3.0 ]</text>
+  <text x="510" y="290" class="small">apple  → [ 2.5, -3.0 ]</text>
+  <text x="510" y="324" class="small">banana → [ 2.2, -2.5 ]</text>
+  <text x="510" y="358" class="small">orange → [ 2.8, -2.8 ]</text>
+  <text x="510" y="392" class="small">football → [-3.0, 4.2 ]</text>
+  <text x="510" y="426" class="small">golf     → [-2.5, 3.1 ]</text>
+  <text x="510" y="460" class="small">tennis   → [-2.0, 2.5 ]</text>
+
+  <rect class="box" x="780" y="110" width="360" height="500"/>
+  <text x="960" y="146" text-anchor="middle" class="label">Embedding Space (Conceptual)</text>
+  <line x1="840" y1="540" x2="1080" y2="540" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="840" y1="540" x2="840" y2="220" stroke="#94a3b8" stroke-width="2"/>
+
+  <circle cx="980" cy="270" r="8" class="dotA"/>
+  <text x="994" y="274" class="small">king</text>
+  <circle cx="950" cy="315" r="8" class="dotA"/>
+  <text x="964" y="319" class="small">man</text>
+  <circle cx="1010" cy="315" r="8" class="dotA"/>
+  <text x="1024" y="319" class="small">woman</text>
+
+  <circle cx="900" cy="470" r="8" class="dotB"/>
+  <text x="914" y="474" class="small">apple</text>
+  <circle cx="930" cy="450" r="8" class="dotB"/>
+  <text x="944" y="454" class="small">banana</text>
+  <circle cx="960" cy="465" r="8" class="dotB"/>
+  <text x="974" y="469" class="small">orange</text>
+
+  <circle cx="860" cy="300" r="8" fill="#7c3aed"/>
+  <text x="874" y="304" class="small">football</text>
+  <circle cx="875" cy="330" r="8" fill="#7c3aed"/>
+  <text x="889" y="334" class="small">golf</text>
+  <circle cx="890" cy="350" r="8" fill="#7c3aed"/>
+  <text x="904" y="354" class="small">tennis</text>
+
+  <text x="960" y="590" text-anchor="middle" class="small">Nearby points often share semantic similarity.</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="760" viewBox="0 0 1300 760" role="img" aria-labelledby="title desc">
+  <title id="title">Vector Embedding Intuition</title>
+  <desc id="desc">Tokens are mapped to vectors; semantically similar words are close in embedding space.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563eb"/>
+    </marker>
+    <style>
+      .title { font: 700 34px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .sub { font: 600 20px 'Segoe UI', Arial, sans-serif; fill: #1e3a8a; }
+      .text { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .panel { fill: #ffffff; stroke: #93c5fd; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #2563eb; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dotA { fill: #1d4ed8; }
+      .dotB { fill: #0f766e; }
+      .dotC { fill: #b45309; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1300" height="760" fill="url(#bg)"/>
+  <text x="650" y="60" text-anchor="middle" class="title">Vector Embedding Intuition</text>
+
+  <rect class="panel" x="60" y="120" width="300" height="560"/>
+  <text x="210" y="160" text-anchor="middle" class="sub">Token IDs</text>
+  <text x="95" y="210" class="text">1  king</text>
+  <text x="95" y="245" class="text">2  man</text>
+  <text x="95" y="280" class="text">3  woman</text>
+  <text x="95" y="315" class="text">4  apple</text>
+  <text x="95" y="350" class="text">5  banana</text>
+  <text x="95" y="385" class="text">6  orange</text>
+  <text x="95" y="420" class="text">7  football</text>
+  <text x="95" y="455" class="text">8  golf</text>
+  <text x="95" y="490" class="text">9  tennis</text>
+  <text x="95" y="560" class="text">Tokenizer output: [1, 2, 3, ...]</text>
+
+  <rect class="panel" x="430" y="120" width="350" height="560"/>
+  <text x="605" y="160" text-anchor="middle" class="sub">Embedding Lookup</text>
+  <text x="470" y="215" class="text">1  [ 4.0,  5.0]</text>
+  <text x="470" y="250" class="text">2  [ 3.0,  3.5]</text>
+  <text x="470" y="285" class="text">3  [ 5.0,  3.0]</text>
+  <text x="470" y="320" class="text">4  [-3.0,  4.0]</text>
+  <text x="470" y="355" class="text">5  [-2.5,  3.0]</text>
+  <text x="470" y="390" class="text">6  [-2.0,  2.0]</text>
+  <text x="470" y="425" class="text">7  [ 2.5, -3.0]</text>
+  <text x="470" y="460" class="text">8  [ 4.0, -2.5]</text>
+  <text x="470" y="495" class="text">9  [ 3.0, -2.0]</text>
+  <text x="470" y="565" class="text">Real models use hundreds or thousands of dimensions.</text>
+
+  <rect class="panel" x="860" y="120" width="380" height="560"/>
+  <text x="1050" y="160" text-anchor="middle" class="sub">Embedding Space (2D sketch)</text>
+  <line x1="910" y1="580" x2="1210" y2="580" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="910" y1="580" x2="910" y2="220" stroke="#94a3b8" stroke-width="2"/>
+
+  <circle class="dotA" cx="1120" cy="300" r="9"/><text x="1138" y="305" class="text">king</text>
+  <circle class="dotA" cx="1085" cy="350" r="9"/><text x="1103" y="355" class="text">man</text>
+  <circle class="dotA" cx="1145" cy="355" r="9"/><text x="1163" y="360" class="text">woman</text>
+
+  <circle class="dotB" cx="945" cy="335" r="9"/><text x="963" y="340" class="text">apple</text>
+  <circle class="dotB" cx="955" cy="365" r="9"/><text x="973" y="370" class="text">banana</text>
+  <circle class="dotB" cx="965" cy="400" r="9"/><text x="983" y="405" class="text">orange</text>
+
+  <circle class="dotC" cx="1080" cy="540" r="9"/><text x="1098" y="545" class="text">football</text>
+  <circle class="dotC" cx="1135" cy="520" r="9"/><text x="1153" y="525" class="text">golf</text>
+  <circle class="dotC" cx="1105" cy="500" r="9"/><text x="1123" y="505" class="text">tennis</text>
+
+  <text x="932" y="620" class="text">Nearby points often represent semantically related words.</text>
+
+  <path class="arrow" d="M360 380 L430 380"/>
+  <path class="arrow" d="M780 380 L860 380"/>
+</svg>
