@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How GPT-3 Works: Tokens, Pretraining, and Prompting</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #1d4ed8;
+      --border: #dbeafe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top right, #dbeafe 0%, #f8fafc 40%);
+      line-height: 1.75;
+    }
+    .container {
+      max-width: 920px;
+      margin: 36px auto;
+      padding: 0 18px;
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 16px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    h1 { margin: 0 0 10px; line-height: 1.3; }
+    h2 { margin-top: 28px; margin-bottom: 10px; color: #0b3a98; }
+    h3 { margin-top: 20px; margin-bottom: 8px; color: #143f97; }
+    p { margin: 12px 0; }
+    ul, ol { margin: 10px 0 10px 26px; }
+    li { margin: 6px 0; }
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .image-block {
+      margin: 18px 0;
+      background: #f8fbff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    img { max-width: 100%; height: auto; display: block; border-radius: 10px; }
+    .caption { color: var(--muted); font-size: 0.92rem; margin-top: 8px; }
+    .pager {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .btn.disabled {
+      color: #94a3b8;
+      border-color: #e2e8f0;
+      background: #f8fafc;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <article>
+      <a class="back" href="../index.html">← Back to Home</a>
+
+      <h1>How GPT-3 Works: Tokens, Pretraining, and Prompting</h1>
+      <p class="lead">My notes on GPT-3 came down to one idea: it can take a task, see a few examples or none at all, and still continue the pattern because the model has already learned a huge amount during pretraining.</p>
+
+      <h2>What GPT-3 Is</h2>
+      <p>GPT-3 is a large autoregressive language model. In practical terms, it reads text left to right and predicts the next token repeatedly until the answer is complete.</p>
+      <p>The important part is not just size. GPT-3 was trained at scale, so it can generalize to many tasks without task-specific retraining.</p>
+
+      <h2>The Basic Pipeline</h2>
+      <p>Think of GPT-3 as a sequence engine with these steps:</p>
+      <ol>
+        <li>Text enters as a prompt.</li>
+        <li>The text is broken into tokens.</li>
+        <li>The tokens are turned into embeddings.</li>
+        <li>The transformer stack processes the token sequence.</li>
+        <li>The model predicts the next token.</li>
+        <li>The prediction is appended and the loop continues.</li>
+      </ol>
+
+      <div class="image-block">
+        <img src="images/generated/gpt3-workflow.svg" alt="GPT-3 workflow from pretraining to next token prediction">
+        <div class="caption">Figure: GPT-3 reads a prompt, predicts the next token, and repeats until the output is complete.</div>
+      </div>
+
+      <h2>What a Token Really Means</h2>
+      <p>A token is a unit of text that the model reads. It may be a whole word, part of a word, a punctuation mark, or a smaller subword piece depending on the tokenizer.</p>
+      <p>This matters because the model does not think in letters or sentences. It thinks in token sequences.</p>
+
+      <h2>Pretraining and Why It Matters</h2>
+      <p>GPT-3 is trained first on very large text datasets. That pretraining teaches it language patterns, syntax, facts, and common reasoning structures.</p>
+      <p>After pretraining, the model can solve new tasks from prompts alone, which is the big shift that made GPT-3 feel different from older systems.</p>
+
+      <h2>Zero-shot, One-shot, and Few-shot Learning</h2>
+      <p>The notes on your page point to the key prompt modes:</p>
+      <ul>
+        <li>Zero-shot: solve the task with no examples.</li>
+        <li>One-shot: solve the task after seeing one example.</li>
+        <li>Few-shot: solve the task after seeing a few examples.</li>
+      </ul>
+      <p>These are all examples of in-context learning. The model adapts from the prompt itself rather than from new weight updates.</p>
+
+      <div class="image-block">
+        <img src="images/generated/gpt3-zero-shot-few-shot.svg" alt="Zero-shot and few-shot prompting comparison">
+        <div class="caption">Figure: GPT-3 can handle new tasks with zero, one, or a few examples in the prompt.</div>
+      </div>
+
+      <h3>Zero-shot</h3>
+      <p>You give the instruction only. This is useful when the task is broad enough that the model can infer the pattern from its pretraining.</p>
+
+      <h3>Few-shot</h3>
+      <p>You provide a few examples in the prompt. This often improves format consistency and task accuracy, especially for structured outputs.</p>
+
+      <h2>Why This Feels Like Magic</h2>
+      <p>GPT-3 can generate new responses because it is not memorizing one fixed script. It is continuing a sequence based on statistical patterns learned from large-scale training.</p>
+      <p>That is why the same model can translate, summarize, classify, or write examples after only prompt changes.</p>
+
+      <h2>Key Takeaway</h2>
+      <p>GPT-3 works by combining large-scale pretraining with token-by-token generation and in-context learning. The prompt matters, the examples matter, and the model’s pretrained knowledge is what makes the whole thing useful.</p>
+
+      <nav class="pager" aria-label="Page navigation">
+        <a class="btn" href="2nd-page.html">← Previous</a>
+        <span class="btn disabled">Next →</span>
+      </nav>
+    </article>
+  </main>
+</body>
+</html>

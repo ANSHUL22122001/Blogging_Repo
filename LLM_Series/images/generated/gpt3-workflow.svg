@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="720" viewBox="0 0 1300 720" role="img" aria-labelledby="title desc">
+  <title id="title">How GPT-3 Works</title>
+  <desc id="desc">Pipeline from pretraining data through tokenization, transformer blocks, and next token prediction, with a prompt to completion flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1d4ed8"/>
+    </marker>
+    <style>
+      .title { font: 700 32px 'Segoe UI', Arial, sans-serif; fill: #0b3a98; }
+      .label { font: 700 20px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .box { fill: #ffffff; stroke: #bfdbfe; stroke-width: 2; rx: 14; }
+      .pill { fill: #eff6ff; stroke: #60a5fa; stroke-width: 2; rx: 999; }
+    </style>
+  </defs>
+
+  <rect width="1300" height="720" fill="url(#bg)"/>
+  <text x="650" y="58" text-anchor="middle" class="title">How GPT-3 Works</text>
+
+  <rect class="pill" x="70" y="120" width="1160" height="70"/>
+  <text x="650" y="161" text-anchor="middle" class="small">GPT-3 learns from large-scale text during pretraining, then uses prompt context to continue the sequence token by token.</text>
+
+  <rect class="box" x="70" y="250" width="240" height="100"/>
+  <text x="190" y="292" text-anchor="middle" class="label">Pretraining Data</text>
+  <text x="190" y="320" text-anchor="middle" class="small">books, web text, articles</text>
+
+  <rect class="box" x="360" y="250" width="240" height="100"/>
+  <text x="480" y="292" text-anchor="middle" class="label">Tokenization</text>
+  <text x="480" y="320" text-anchor="middle" class="small">text → token IDs</text>
+
+  <rect class="box" x="650" y="250" width="280" height="100"/>
+  <text x="790" y="292" text-anchor="middle" class="label">Transformer Stack</text>
+  <text x="790" y="320" text-anchor="middle" class="small">attention + feed-forward layers</text>
+
+  <rect class="box" x="980" y="250" width="250" height="100"/>
+  <text x="1105" y="292" text-anchor="middle" class="label">Next Token</text>
+  <text x="1105" y="320" text-anchor="middle" class="small">probability over vocabulary</text>
+
+  <line x1="310" y1="300" x2="360" y2="300" stroke="#1d4ed8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="600" y1="300" x2="650" y2="300" stroke="#1d4ed8" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="930" y1="300" x2="980" y2="300" stroke="#1d4ed8" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect class="box" x="110" y="455" width="470" height="150"/>
+  <text x="345" y="495" text-anchor="middle" class="label">Prompt at Inference Time</text>
+  <text x="345" y="527" text-anchor="middle" class="small">"Summarize this article in three bullets"</text>
+  <text x="345" y="555" text-anchor="middle" class="small">The model uses the prompt as context, then predicts the most likely next token.</text>
+  <text x="345" y="583" text-anchor="middle" class="small">This repeats until it finishes the answer.</text>
+
+  <rect class="box" x="720" y="455" width="470" height="150"/>
+  <text x="955" y="495" text-anchor="middle" class="label">Output Example</text>
+  <text x="955" y="527" text-anchor="middle" class="small">1. GPT-3 reads the prompt</text>
+  <text x="955" y="555" text-anchor="middle" class="small">2. It predicts the next word</text>
+  <text x="955" y="583" text-anchor="middle" class="small">3. It keeps generating until the task looks complete</text>
+
+  <line x1="580" y1="530" x2="720" y2="530" stroke="#1d4ed8" stroke-width="4" marker-end="url(#arrow)"/>
+</svg>

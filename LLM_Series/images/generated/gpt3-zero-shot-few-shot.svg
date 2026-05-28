@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="720" viewBox="0 0 1300 720" role="img" aria-labelledby="title desc">
+  <title id="title">Zero-shot and Few-shot Learning in GPT-3</title>
+  <desc id="desc">Comparison of zero-shot, one-shot, and few-shot prompting with GPT-3 using examples in the prompt.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eef4ff"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 32px 'Segoe UI', Arial, sans-serif; fill: #0b3a98; }
+      .label { font: 700 22px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .small { font: 500 16px 'Segoe UI', Arial, sans-serif; fill: #334155; }
+      .panel0 { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; rx: 16; }
+      .panel1 { fill: #eff6ff; stroke: #93c5fd; stroke-width: 2; rx: 16; }
+      .panel2 { fill: #ecfeff; stroke: #67e8f9; stroke-width: 2; rx: 16; }
+      .panel3 { fill: #f5f3ff; stroke: #c4b5fd; stroke-width: 2; rx: 16; }
+      .chip { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.5; rx: 999; }
+    </style>
+  </defs>
+
+  <rect width="1300" height="720" fill="url(#bg)"/>
+  <text x="650" y="58" text-anchor="middle" class="title">Zero-shot, One-shot, and Few-shot Prompting</text>
+
+  <rect class="panel0" x="60" y="120" width="380" height="520"/>
+  <text x="250" y="160" text-anchor="middle" class="label">Zero-shot</text>
+  <rect class="chip" x="100" y="210" width="300" height="48"/>
+  <text x="250" y="240" text-anchor="middle" class="small">Task: Translate this sentence.</text>
+  <text x="250" y="300" text-anchor="middle" class="small">No example is provided.</text>
+  <text x="250" y="332" text-anchor="middle" class="small">The model relies on pretraining alone.</text>
+  <text x="250" y="392" text-anchor="middle" class="small">Useful when the task is new or generic.</text>
+
+  <rect class="panel1" x="460" y="120" width="380" height="520"/>
+  <text x="650" y="160" text-anchor="middle" class="label">One-shot</text>
+  <rect class="chip" x="500" y="210" width="300" height="48"/>
+  <text x="650" y="240" text-anchor="middle" class="small">Example: input → output</text>
+  <text x="650" y="300" text-anchor="middle" class="small">Prompt includes one solved example.</text>
+  <text x="650" y="332" text-anchor="middle" class="small">The model imitates the pattern.</text>
+  <text x="650" y="392" text-anchor="middle" class="small">Helps when format matters.</text>
+
+  <rect class="panel2" x="860" y="120" width="380" height="520"/>
+  <text x="1050" y="160" text-anchor="middle" class="label">Few-shot</text>
+  <rect class="chip" x="900" y="205" width="300" height="40"/>
+  <text x="1050" y="231" text-anchor="middle" class="small">Example 1</text>
+  <rect class="chip" x="900" y="255" width="300" height="40"/>
+  <text x="1050" y="281" text-anchor="middle" class="small">Example 2</text>
+  <rect class="chip" x="900" y="305" width="300" height="40"/>
+  <text x="1050" y="331" text-anchor="middle" class="small">Example 3</text>
+  <text x="1050" y="390" text-anchor="middle" class="small">A few examples guide the model strongly.</text>
+  <text x="1050" y="422" text-anchor="middle" class="small">This is often called in-context learning.</text>
+  <text x="1050" y="454" text-anchor="middle" class="small">The model adapts without weight updates.</text>
+  <text x="1050" y="516" text-anchor="middle" class="small">This is why GPT-3 can handle new tasks quickly.</text>
+</svg>
